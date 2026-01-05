@@ -49,25 +49,28 @@ export async function registerRoutes(
   });
 
   // Seed Data
-  const existingProfile = await storage.getProfile();
-  if (!existingProfile) {
-    await storage.createProfile({
-      name: "Zubair Muwwakil",
-      title: "Software Developer | Financial Data Analyst",
-      bio: "I graduated from University of Toronto with a Bachelor of Computer Science. I am passionate about software development and financial analysis. I have a strong love for pickleball and have built projects around it.",
-      email: "zmuwwakil@gmail.com",
-      linkedinUrl: "https://www.linkedin.com/in/zubairmuwwakil/",
-      githubUrl: "https://github.com/ZthEchelon",
-      resumeUrl: "https://drive.google.com/file/d/1Z87uMI6RrrPa9KeIhZChkpzl-YYZYgTr/view?usp=sharing"
-    });
+  const projectsCount = (await storage.getProjects()).length;
+  if (projectsCount === 0) {
+    const existingProfile = await storage.getProfile();
+    if (!existingProfile) {
+      await storage.createProfile({
+        name: "Zubair Muwwakil",
+        title: "Software Developer | Financial Data Analyst",
+        bio: "I graduated from University of Toronto with a Bachelor of Computer Science. I am passionate about software development and financial analysis. I have a strong love for pickleball and have built projects around it.",
+        email: "zmuwwakil@gmail.com",
+        linkedinUrl: "https://www.linkedin.com/in/zubairmuwwakil/",
+        githubUrl: "https://github.com/ZthEchelon",
+        resumeUrl: "https://drive.google.com/file/d/1Z87uMI6RrrPa9KeIhZChkpzl-YYZYgTr/view?usp=sharing"
+      });
 
-    await storage.createEducation({
-      school: "University of Toronto",
-      degree: "Bachelor of Computer Science",
-      field: "Computer Science",
-      startDate: "2019",
-      endDate: "2023"
-    });
+      await storage.createEducation({
+        school: "University of Toronto",
+        degree: "Bachelor of Computer Science",
+        field: "Computer Science",
+        startDate: "2019",
+        endDate: "2023"
+      });
+    }
 
     await storage.createProject({
       title: "Pickleball Session Manager",
@@ -97,12 +100,15 @@ export async function registerRoutes(
       tags: ["Infrastructure", "Server Setup", "Data Management"]
     });
 
-    await storage.createSkill({ name: "JavaScript", category: "frontend", proficiency: 90 });
-    await storage.createSkill({ name: "React", category: "frontend", proficiency: 85 });
-    await storage.createSkill({ name: "Node.js", category: "backend", proficiency: 80 });
-    await storage.createSkill({ name: "Python", category: "backend", proficiency: 85 });
-    await storage.createSkill({ name: "SQL", category: "data", proficiency: 80 });
-    await storage.createSkill({ name: "Financial Analysis", category: "data", proficiency: 75 });
+    const skillsCount = (await storage.getSkills()).length;
+    if (skillsCount === 0) {
+      await storage.createSkill({ name: "JavaScript", category: "frontend", proficiency: 90 });
+      await storage.createSkill({ name: "React", category: "frontend", proficiency: 85 });
+      await storage.createSkill({ name: "Node.js", category: "backend", proficiency: 80 });
+      await storage.createSkill({ name: "Python", category: "backend", proficiency: 85 });
+      await storage.createSkill({ name: "SQL", category: "data", proficiency: 80 });
+      await storage.createSkill({ name: "Financial Analysis", category: "data", proficiency: 75 });
+    }
   }
 
   return httpServer;
