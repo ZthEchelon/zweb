@@ -1,0 +1,148 @@
+1) Hero: make it sharper + more SWE-forward
+
+Right now: “Software Developer | Financial Data Analyst” + general passion text.
+
+Change to:
+
+Headline: “Software Engineer (Full-Stack / Backend)” (put finance as a secondary line if you want)
+
+1–2 sentence value prop with proof: what you build + what you optimize (reliability, data integrity, performance, clean architecture)
+
+Add 2 CTAs (buttons):
+
+View Projects
+
+Resume (PDF)
+
+Add quick credibility chips under the CTAs:
+
+“Java / Spring Boot • React • SQL • Docker”
+
+“Built data pipelines + web apps”
+
+“Open to US remote (US citizen)”
+
+This instantly tells recruiters you’re SWE-first and removes “split identity” confusion.
+
+2) About: rewrite from “passionate” → “evidence”
+
+Your About reads like a student bio. Replace with 4–6 lines like:
+
+what you build (systems/web apps/pipelines)
+
+what you care about (correctness, maintainability, data integrity)
+
+what you’ve shipped (2–3 concrete examples tied to your projects)
+
+what you’re looking for (SWE roles, backend/full-stack)
+
+Keep pickleball mention, but as context for products you shipped, not as the centerpiece.
+
+3) Skills: drop the percentages, add real signals
+
+Percent bars are a red flag because they’re subjective.
+
+Replace “Technical Proficiency 90%/85%…” with:
+
+Core: Java (Spring Boot), TypeScript/JavaScript, React, SQL
+
+Also: Node.js, Python, Docker, Postgres, Prisma, REST, Testing (JUnit/Jest), CI/CD
+
+Practices: Clean architecture, API design, schema migrations, observability basics
+
+If you want a visual, use “strong / working / familiar” instead of numbers.
+
+4) Experience: you need this section to exist (even if short)
+
+Your nav has Experience but your pasted content shows only Education.
+
+Add:
+
+SAP Fioneer — Software Engineer (Jan 2022–Aug 2022)
+
+WeMeta — Software Engineer (Jul 2021–Feb 2023)
+
+Web Dev / Full Stack — (Dec 2019–Mar 2023, Whitby)
+
+For each: 2–4 bullets, each in Impact format:
+
+“Built X… resulting in Y… using Z”
+Even if you don’t have perfect metrics, use scale/throughput/latency/complexity.
+
+5) Projects: upgrade from descriptions → case studies (biggest win)
+
+Your project blurbs are good, but you need proof + engineering decisions.
+
+For each featured project, add:
+
+Problem
+
+What I built
+
+Key technical decisions (2–3 bullets)
+
+Results / impact (numbers if possible)
+
+Buttons: Live Demo • GitHub • Read Case Study
+
+Pickleball Session Manager (make it your flagship full-stack case study)
+
+Add details like:
+
+data model + migrations (Prisma)
+
+balancing algorithm approach
+
+rating changes logic
+
+auth / roles (if any)
+
+deployment (Vercel/Replit/etc.)
+
+Market Data Pipeline (make it your flagship backend case study)
+
+Add:
+
+ingest flow + idempotency
+
+caching strategy + why
+
+DB schema choices (your normalized indicator table is a great talking point)
+
+API endpoints + examples
+
+tests + performance notes
+
+Mind Map / HomeServer
+
+These are fine, but they read weaker unless you add technical depth + screenshots. If they’re not strong, demote them to “Other Projects”.
+
+Also add screenshots/GIFs. Portfolios without visuals feel unfinished.
+
+6) Contact: fix credibility issues + friction
+
+“I’ll get back to you within 24 hours.” → feels like marketing. Make it simpler.
+
+Your form should either:
+
+actually send (EmailJS/Resend/etc.) and show success state, or
+
+remove it and just show email + LinkedIn.
+A broken form hurts trust.
+
+7) Add 2 small sections that dramatically improve conversion
+A) “What I’m looking for”
+
+1 short line:
+
+“Backend / Full-Stack SWE roles • Java/Spring Boot or TS/Node • Remote US”
+
+B) “Proof / Links”
+
+Resume PDF
+
+GitHub
+
+LinkedIn
+
+(Optional) LeetCode if you want, but not required
