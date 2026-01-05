@@ -70,10 +70,31 @@ export async function registerRoutes(
     });
 
     await storage.createProject({
-      title: "Pickleball Social",
-      description: "A social platform for pickleball enthusiasts to connect and organize matches.",
-      link: "https://zmuwwakil9.wixsite.com/pickleball-social",
-      tags: ["Web Development", "Community"]
+      title: "Pickleball Session Manager",
+      description: "A web application for managing pickleball sessions, players, balanced groups, matches, and rating changes. Built to model real-world recreational league workflows with a focus on correctness, data integrity, and clean architecture.",
+      link: "https://www.zubairmuwwakil.com/github-projects-certifications#h.x7x3lu4gcab7",
+      tags: ["React", "Web App", "Data Integrity", "Architecture"]
+    });
+
+    await storage.createProject({
+      title: "Market Data Pipeline",
+      description: "A Java Spring Boot market data pipeline that ingests end-of-day stock data, stores it in an in-memory time-series cache, and exposes analytics like SMA and daily high/low through REST APIs and a lightweight dashboard.",
+      link: "https://www.zubairmuwwakil.com/github-projects-certifications#h.7fnkak3j8h5",
+      tags: ["Java", "Spring Boot", "Data Pipeline", "REST API"]
+    });
+
+    await storage.createProject({
+      title: "Mind Map Website",
+      description: "A specialized tool built to track thoughts, project steps, or create timelines using interactive bubbles and grids.",
+      link: "https://www.zubairmuwwakil.com/github-projects-certifications#h.eckex5m8z6u0",
+      tags: ["JavaScript", "Interactive", "Mind Mapping"]
+    });
+
+    await storage.createProject({
+      title: "HomeServer Setup",
+      description: "Created a custom homeserver infrastructure to function similarly to Google Drive for personal data management.",
+      link: "https://www.zubairmuwwakil.com/homeserver-setup-guide",
+      tags: ["Infrastructure", "Server Setup", "Data Management"]
     });
 
     await storage.createSkill({ name: "JavaScript", category: "frontend", proficiency: 90 });
