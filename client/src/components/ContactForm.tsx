@@ -49,7 +49,7 @@ export function ContactForm() {
         </div>
         <h3 className="text-2xl font-bold text-foreground mb-2">Thank You!</h3>
         <p className="text-muted-foreground">
-          Your message has been sent successfully. I usually respond within 24-48 hours.
+          Your message has been sent successfully. I'll reply soon—email and LinkedIn are fastest.
         </p>
         <Button 
           variant="outline" 

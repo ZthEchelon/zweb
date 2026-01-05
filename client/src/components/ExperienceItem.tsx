@@ -8,6 +8,11 @@ interface ExperienceItemProps {
 }
 
 export function ExperienceItem({ experience, index }: ExperienceItemProps) {
+  const bulletPoints = (experience.description || "")
+    .split("\n")
+    .map((point) => point.trim())
+    .filter(Boolean);
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -43,9 +48,20 @@ export function ExperienceItem({ experience, index }: ExperienceItemProps) {
             <span>{experience.company}</span>
           </div>
           
-          <p className="text-muted-foreground leading-relaxed">
-            {experience.description}
-          </p>
+          {bulletPoints.length > 0 ? (
+            <ul className="space-y-2 text-muted-foreground">
+              {bulletPoints.map((point, idx) => (
+                <li key={idx} className="flex gap-2">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-primary/70 flex-shrink-0" />
+                  <span className="leading-relaxed">{point}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-muted-foreground leading-relaxed">
+              {experience.description}
+            </p>
+          )}
         </div>
       </div>
     </motion.div>
